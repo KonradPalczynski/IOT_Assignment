@@ -1,13 +1,16 @@
 import RPi.GPIO as GPIO
 import time
 
-BUTTON_PIN = 18
-
+BUTTON = 18
 GPIO.setmode(GPIO.BCM)
+
 button = GPIO.setup(BUTTON, GPIO.IN)
 
 print("System ready...")
 
 while True:
-    print(GPIO.input(BUTTON_PIN))
-    time.sleep(0.5)
+    if GPIO.input(18):
+        print("Button pressed!")
+    
+
+    time.sleep(0.1) 
