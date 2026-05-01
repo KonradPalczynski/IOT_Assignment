@@ -33,6 +33,7 @@ def handle_v0_write(value):
             reaction_ms = (time() - led_on_time) *1000
             led.off()
             waiting = False
+            blynk.virtual_write(1,0)
             next_time = time() + random.uniform(2, 5)
             blynk.virtual_write(2, int(reaction_ms))
             print(f"Reaction Time (ms): {reaction_ms:.0f} ms")
@@ -64,6 +65,7 @@ while True:
         led.on()
         waiting = True
         led_on_time = current
+        blynk.virtual_write(1, 1)
         print("LED ON - press button!")
 
     if not waiting and current >= next_time:
