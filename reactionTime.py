@@ -1,31 +1,3 @@
-# from gpiozero import LED
-# from time import sleep 
-
-# led = LED(5)
-
-# while True:
-#     led.on()
-#     print("LED ON")
-#     sleep(1)
-
-#     led.off()
-#     print("LED OFF")
-#     sleep(1)
-
-# @blynk.on("V0")
-# def blynk_v0_write(value):
-#     global waiting
-
-#     print("Button:", value)
-
-#     if value[0] == "1" and waiting:
-#         print("REACTION DETECTED")
-#         led.off()
-#         waiting = False
-
-#     else: 
-#         print("Too early!")
-
 import BlynkLib
 from gpiozero import LED
 from time import sleep, time
@@ -40,7 +12,8 @@ waiting = False
 led_on_time = 0
 next_time = time() + random.uniform(2, 5)
 
-print("Program started")
+print("REACTION TIME GAME")
+print("Press the Button when LED turns on!")
 
 
  
@@ -49,14 +22,25 @@ print("Program started")
 
 @blynk.on("V0")
 def handle_v0_write(value):
+    global waiting, next_time, led_on_time
     button_value = value[0]
     blynk.last_activity = time()
     print(f'Current button value: {button_value}')
 
     if button_value == "1":
         print("Button Pressed")
-    else:
-        print("Awaiting Press")
+        if waiting: 
+            reaction_ms = (time() - led_on_time) *1000
+            led.off()
+            waiting = False
+            next_time = time() + random.uniform(2, 5)
+            print(f"Reaction Time (ms): {reaction_ms:.0f} ms")
+        else:
+            print("Too early! Wait for LED to turn on")
+            next_time = time() + random.uniform(2,5)
+
+    else: 
+        print("Button Released")
 
 while True:
     blynk.run()
