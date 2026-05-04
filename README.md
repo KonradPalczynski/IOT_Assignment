@@ -1,4 +1,3 @@
-[blynk.html](https://github.com/user-attachments/files/27375535/blynk.html)
 # IOT Assignment
 Reaction Time Game
 
