@@ -1,3 +1,4 @@
+[blynk.html](https://github.com/user-attachments/files/27375535/blynk.html)
 # IOT Assignment
 Reaction Time Game
 
@@ -51,8 +52,13 @@ JSON file:
 
 The data is timestamped as seen in the screenshot. 
 
-## Blynk dashboard
+## Blynk web dashboard
 <img width="1919" height="868" alt="image" src="https://github.com/user-attachments/assets/7d7ee531-ade7-41f8-9817-ae2a347764c5" />
+
+---
+
+## Blynk Phone dashboard
+<img width="585" height="1266" alt="IMG_7231" src="https://github.com/user-attachments/assets/0453047f-93ed-4c0d-8d81-2c2faf4329db" />
 
 ---
 
