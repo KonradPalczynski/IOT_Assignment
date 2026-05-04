@@ -78,6 +78,10 @@ This happened to me when working on the project at home connected to the wifi vi
 4. https://pytutorial.com/writing-json-to-file-in-python/?utm_source=chatgpt.com
 5.  AI was used to try fix my physical button error however none of the code worked and therefore wasnt used in the final project
 
+---
+## Video demo
+https://youtu.be/Wxsy-MD3U_A
+
 
 
   
