@@ -82,6 +82,9 @@ This happened to me when working on the project at home connected to the wifi vi
 ## Video demo
 https://youtu.be/Wxsy-MD3U_A
 
+---
+## Presentation
+[IOT Standards and protocols presentation.pptx](https://github.com/user-attachments/files/27485709/IOT.Standards.and.protocols.presentation.pptx)
 
 
   
